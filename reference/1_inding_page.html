@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LogeStudent | Le Concierge Digital des Étudiants à Labé</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#003f87",
+                        "on-secondary-container": "#475a7f",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#983c00",
+                        "secondary": "#4c5e84",
+                        "primary-container": "#0056b3",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#004491",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed": "#001a40",
+                        "on-primary-container": "#bbd0ff",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#34476a",
+                        "surface-container": "#edeeef",
+                        "on-secondary-fixed": "#041b3c",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#351000",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#b3c7f1",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1d",
+                        "on-surface": "#191c1d",
+                        "on-surface-variant": "#424752",
+                        "secondary-fixed": "#d7e2ff",
+                        "inverse-primary": "#acc7ff",
+                        "outline-variant": "#c2c6d4",
+                        "inverse-surface": "#2e3132",
+                        "tertiary": "#722b00",
+                        "surface-tint": "#115cb9",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ffc2a7",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#d7e2ff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#acc7ff",
+                        "secondary-container": "#bfd2fd",
+                        "outline": "#727784"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #003f87 0%, #0056b3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-btn-gradient {
+            background: linear-gradient(135deg, #003f87 0%, #0056b3 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 glass-nav shadow-sm h-20 flex justify-between items-center px-8 max-w-full mx-auto">
+        <div class="text-2xl font-headline font-bold tracking-tight text-primary">LogeStudent</div>
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center space-x-8 font-label font-medium text-sm">
+            <a class="text-primary border-b-2 border-primary pb-1" href="#">Home</a>
+            <a class="text-slate-600 hover:text-primary transition-colors" href="#">Residences</a>
+            <a class="text-slate-600 hover:text-primary transition-colors" href="#">Login</a>
+            <a class="bg-btn-gradient text-white px-6 py-2.5 rounded-full font-bold scale-95 active:opacity-80 transition-transform"
+                href="#">Register</a>
+        </div>
+        <!-- Mobile Menu Icon (Simplified for Layout) -->
+        <div class="md:hidden">
+            <span class="material-symbols-outlined text-primary">menu</span>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden min-h-[921px] flex items-center px-8 lg:px-20 bg-surface">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="z-10 order-2 lg:order-1 mt-12 lg:mt-0">
+                    <h1 class="font-headline font-extrabold text-5xl lg:text-7xl leading-tight text-on-background mb-6">
+                        Trouvez votre logement étudiant idéal à <span class="text-gradient">Labé</span> en quelques
+                        clics.
+                    </h1>
+                    <p class="text-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                        Accédez à une sélection exclusive de cités universitaires sécurisées et modernes. LogeStudent
+                        vous accompagne de la recherche à l'emménagement.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-btn-gradient text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all scale-100 active:scale-95">
+                            Trouver une chambre
+                        </button>
+                        <button
+                            class="bg-surface-container-high text-on-secondary-container px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-all">
+                            Inscrire ma Cité
+                        </button>
+                    </div>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                    <div
+                        class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative translate-y-8 lg:translate-y-12">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Modern architectural student residence building in Labé with clean white walls and blue accents under a bright clear sky"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeUo6zWuQWGlf-n0I1T_ZWtc2wTapWfTqIUk1NygO2OnqiTs__y80j9GPByJrssSEIAvQK49TvfBJ58QUuxAe4VA85oY1w6ppPQr2u2ecq4mWvfHHGuZQuH12mKRDHUGY5St9I5aX20YrhIM95DaanDejTnYK3zR95na1M9uXpHm41jbCRu9q9cuI62aUkxCZ1ccu8YtMniDMgNwlfr5uL_zsvgJ5lQf76YBGxbPkxP1PTo6RnXYGM_i4kZKhjDeZjLCTIPlkk-OE" />
+                        <div
+                            class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur px-6 py-4 rounded-lg shadow-lg flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-label uppercase tracking-widest text-on-surface-variant">
+                                    Disponible maintenant</p>
+                                <p class="font-headline font-bold text-primary">Cité du Savoir, Quartier Tata</p>
+                            </div>
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-variation-settings: 'FILL' 1;">verified</span>
+                        </div>
+                    </div>
+                    <!-- Asymmetric Decorative Element -->
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats Section -->
+        <section class="py-16 bg-surface-container-low px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-surface-container-lowest rounded-xl shadow-sm">
+                    <div class="font-headline font-extrabold text-4xl text-primary mb-2">500+</div>
+                    <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Chambres Vérifiées
+                    </p>
+                </div>
+                <div class="text-center p-6 bg-surface-container-lowest rounded-xl shadow-sm">
+                    <div class="font-headline font-extrabold text-4xl text-primary mb-2">25</div>
+                    <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Cités Partenaires
+                    </p>
+                </div>
+                <div class="text-center p-6 bg-surface-container-lowest rounded-xl shadow-sm">
+                    <div class="font-headline font-extrabold text-4xl text-primary mb-2">1.2k</div>
+                    <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Étudiants Logés</p>
+                </div>
+                <div class="text-center p-6 bg-surface-container-lowest rounded-xl shadow-sm">
+                    <div class="font-headline font-extrabold text-4xl text-primary mb-2">98%</div>
+                    <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Satisfaction</p>
+                </div>
+            </div>
+        </section>
+        <!-- Features Bento Grid -->
+        <section class="py-24 px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-headline font-bold text-3xl md:text-4xl text-on-background mb-4">Conçu pour votre
+                    sérénité</h2>
+                <p class="text-on-surface-variant max-w-2xl mx-auto">Une expérience fluide pour les étudiants, une
+                    gestion simplifiée pour les propriétaires.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+                <!-- Student Features -->
+                <div
+                    class="md:col-span-8 bg-primary rounded-xl p-10 flex flex-col justify-between text-white overflow-hidden relative group">
+                    <div class="z-10">
+                        <span
+                            class="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-label uppercase tracking-wider mb-6">Étudiants</span>
+                        <h3 class="text-3xl font-headline font-bold mb-4">Le logement idéal sans le stress</h3>
+                        <div class="space-y-4 max-w-md">
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-primary-container bg-white rounded-full p-1 text-sm">check</span>
+                                <p class="text-sm font-medium">Annonces 100% vérifiées par nos équipes sur place à Labé.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-primary-container bg-white rounded-full p-1 text-sm">check</span>
+                                <p class="text-sm font-medium">Paiement sécurisé et suivi des quittances en temps réel.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-primary-container bg-white rounded-full p-1 text-sm">check</span>
+                                <p class="text-sm font-medium">Filtres multicritères (Prix, Proximité Université,
+                                    Équipements).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="absolute right-0 bottom-0 w-2/3 h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity"
+                        data-alt="Atmospheric photo of a clean, bright student room in Labé with a wooden desk and a laptop, warm sunlight filtering through the window"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJWSBpJvN5pB9wR-uifNvkSN6FLkE4i13-65IOWN_8FdRynvaXzbqF4vVrKmj1eA5xro25fF7nGPWAmeI1r2BMj_5xr9WQFaw5fy6Mk0gre7p1aX5NSPFOSpwduTCmj66_xgpuOJ_cMGtD0XIAN1cWvPO6g9oAacd4xX6XWCMlCQmoJtHjyjT6pRxpyar625i3jEWtZvle5F0jrEs6RUDLbQogLKlRay-doxurwCINKZL5gniCT3b93NxIXzReBLmQSt00jt1zdP8" />
+                </div>
+                <!-- Owner Feature 1 -->
+                <div class="md:col-span-4 bg-surface-container-high rounded-xl p-8 flex flex-col justify-center">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-6">analytics</span>
+                    <h3 class="text-xl font-headline font-bold mb-3">Stats en temps réel</h3>
+                    <p class="text-on-surface-variant text-sm">Suivez l'occupation de votre cité et vos revenus mensuels
+                        depuis un tableau de bord intuitif.</p>
+                </div>
+                <!-- Owner Feature 2 -->
+                <div class="md:col-span-4 bg-secondary-container rounded-xl p-8 flex flex-col justify-center">
+                    <span
+                        class="material-symbols-outlined text-on-secondary-container text-4xl mb-6">verified_user</span>
+                    <h3 class="text-xl font-headline font-bold mb-3">Étudiants vérifiés</h3>
+                    <p class="text-on-surface-variant text-sm">Accédez à des profils d'étudiants sérieux avec dossiers
+                        complets déjà validés par LogeStudent.</p>
+                </div>
+                <!-- Owner Summary -->
+                <div class="md:col-span-8 bg-surface-container-low rounded-xl p-10 flex items-center gap-8">
+                    <div class="flex-1">
+                        <span
+                            class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-label uppercase tracking-wider mb-6">Propriétaires</span>
+                        <h3 class="text-2xl font-headline font-bold mb-4">Maximisez votre taux d'occupation</h3>
+                        <p class="text-on-surface-variant text-sm mb-6">Gérez vos contrats, vos paiements et vos
+                            communications avec vos locataires en un seul endroit.</p>
+                        <button class="text-primary font-bold flex items-center gap-2 group">
+                            Découvrir le portail propriétaire
+                            <span
+                                class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                    <div class="hidden lg:block w-48 h-48 bg-white rounded-full shadow-inner p-4 overflow-hidden">
+                        <img class="w-full h-full object-contain"
+                            data-alt="Close up of a sleek mobile application dashboard showing rental income charts and booking requests"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-tVdAVL7BheM1B2LFTe3zA-AdHpdJXQAOCBXCVx_9eZ5iU2Hgd1DPFR0JIK3EC-svPpB4XVc9x8pcWs8GS-bP8UtXGWS99gC17PbLKFX2cwbVfilPaPfIMV7OSaUuhwlmxXzWQsB_BVbtVF4lvqLi5r003w92iGuSpvGEo7_1UUbMT-v7HMPQ-MMpt5RwLl_q_R-tH-47N_94Rk_3l3sqAfrR5Rwnkk2Oa7RLrhx0YmPgZPGp9JfVEgbqwwEUuqmhhCVpkE9LLuA" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Asymmetric Layout -->
+        <section class="py-24 bg-surface-container-lowest">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img class="rounded-lg shadow-md aspect-square object-cover"
+                                data-alt="A panoramic view of the hills of Labé, Guinea, during a clear day, showing traditional and modern houses"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO-tjCYGpx9wCh5ARDWPRKDJfmk8ymA4RkPxGo8yqtxqIifV9KS0ejWil-3rP7OVEWz7uJEB4fmwsPTpNe35AqQsN1WGNKJ5IQji5k_ZIujNvBlYjIuNiwxwHsXYLCiseXl0e49mo9tDt67EX-zY1m4co8jL4hO63rw9ckeo2AbAmQtY8mP-lEsCku7o8vAZNBB0fX1EZlCn0RnCZ8wgxGAV4zdgOJLuqawlgcYBvXlYiCrk5cO75IwtS6s1G_CsMe7OotwanWDKk" />
+                            <img class="rounded-lg shadow-md aspect-video object-cover"
+                                data-alt="A lush green courtyard of a student residence with communal seating and flowers"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBloTMuAJ6qQ-7tcBrcyqkq9Ft4yhXIP37Rw9wKrX2dRD60GoHSWgS2NPAqfBVCc9bcMl_BQrnxV0ZL6JdetyaBJCS3bS5jI-F3lLv0K26j5aQBaagdxh0I4T87L9jwmxB-RZ_R1rtwlQ3YmsJr3nC-1ddMJCUMKYllGYxGYBr-ZoAso6GZ7lKcNcGQ0s1Nx8W7jRgDnaIXUBZAfOUYXK-SX08Uj10bQumLSgw7ugFI9sbx2xKYacxOcGk2AJIxpdQdbt43Tq8PB3w" />
+                        </div>
+                        <div class="pt-12 space-y-4">
+                            <img class="rounded-lg shadow-md aspect-video object-cover"
+                                data-alt="Interior of a modern student bedroom with a cozy bed and bright textiles"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn2hq3O4_XPI1iKVQJmYaRm3XeoMSdKNikUxDbr5wTZ4bJYrFMXa2QdDQYmXVLueLvzB2z--vqqiWNnaRUnrNxfl5ubb0TwZZgMGGZpU9_cm0C3IUWFCDT4uR3a20QQExh3YJ9O-yAEOYsIs07LK2zS8sR5ZCBxg3k68P2pZI7Q1mzs1XEJfVaMqNfKKSRUE_j1HfXbMKap1y8ex7Cn-5V7ixfwaJg0Y_DdvjuPCqUOVP4l9uLRFRMTRnIIWEhE2dcwKMdnXnQItw" />
+                            <img class="rounded-lg shadow-md aspect-square object-cover"
+                                data-alt="A group of smiling Guinean students talking together on a college campus"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPLqMSkd0tZKcMDxXGEuVzRpMb67eoMefa3EO5l8g3785ohlX1XnRd3nRYhsFPiroVRL0lYs4lem0vICECRry11txz6hulj5xxDWJSHIrb7vHffgmjh8QBWCNlIqV7VoUX0j-TBaoyX8rEhvlLHn8WOVDLyfo9FQMzRfdcAI2SUL0tM9JecEAXqU8l-uJXnNiQ9xdDZ2r5Rmogx8RH9zeY_LM1VCgvzEo5UF770m7WO-q4zg-ZKnldvn0uTtWHvC8IiK6akJC80oM" />
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-primary text-white p-8 rounded-xl shadow-xl max-w-xs">
+                        <p class="text-sm font-label uppercase tracking-widest opacity-80 mb-2">Notre Mission</p>
+                        <p class="font-headline font-bold">Simplifier la vie estudiantine pour que vous puissiez vous
+                            concentrer sur vos études.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-headline font-bold text-4xl mb-12">Comment ça marche ?</h2>
+                    <div class="space-y-12">
+                        <!-- Step 1 -->
+                        <div class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl">
+                                1</div>
+                            <div>
+                                <h4 class="font-headline font-bold text-xl mb-2">Recherchez</h4>
+                                <p class="text-on-surface-variant leading-relaxed">Explorez les cités par quartier, prix
+                                    ou équipements. Visualisez les chambres avec des photos réelles et descriptifs
+                                    détaillés.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl">
+                                2</div>
+                            <div>
+                                <h4 class="font-headline font-bold text-xl mb-2">Visitez (Physiquement ou Virtuellement)
+                                </h4>
+                                <p class="text-on-surface-variant leading-relaxed">Prenez rendez-vous en un clic pour
+                                    une visite sur place ou consultez nos visites 360° quand elles sont disponibles.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex gap-6">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl">
+                                3</div>
+                            <div>
+                                <h4 class="font-headline font-bold text-xl mb-2">Réservez &amp; Payez</h4>
+                                <p class="text-on-surface-variant leading-relaxed">Signez votre contrat numériquement et
+                                    effectuez votre premier versement en toute sécurité via Orange Money ou carte
+                                    bancaire.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA Section -->
+        <section class="py-24 px-8">
+            <div
+                class="max-w-5xl mx-auto bg-primary rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden shadow-2xl">
+                <!-- Decorative Circle -->
+                <div class="absolute -top-24 -left-24 w-64 h-64 border-[40px] border-white/5 rounded-full"></div>
+                <h2 class="font-headline font-extrabold text-3xl md:text-5xl text-white mb-8 relative z-10">
+                    Prêt à emménager dans votre nouveau chez-vous ?
+                </h2>
+                <div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
+                    <button
+                        class="bg-white text-primary px-10 py-5 rounded-full font-bold text-xl shadow-lg hover:bg-surface-container-lowest transition-all">
+                        Explorer les résidences
+                    </button>
+                    <button
+                        class="bg-primary-container text-white px-10 py-5 rounded-full font-bold text-xl border border-white/20 hover:bg-white/10 transition-all">
+                        Contacter un conseiller
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 px-8 bg-slate-50 dark:bg-slate-950">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div class="col-span-1 md:col-span-1">
+                <div class="font-headline font-black text-lg text-primary mb-4">LogeStudent</div>
+                <p class="text-slate-500 font-label text-xs leading-relaxed">La solution digitale pour l'hébergement
+                    étudiant à Labé, facilitant la vie des jeunes académiques.</p>
+            </div>
+            <div>
+                <h4 class="font-label text-xs uppercase tracking-widest text-blue-900 mb-6 font-bold">Plateforme</h4>
+                <ul class="space-y-4 text-slate-500 font-label text-xs uppercase tracking-widest">
+                    <li><a class="hover:underline" href="#">About</a></li>
+                    <li><a class="hover:underline" href="#">Contact</a></li>
+                    <li><a class="hover:underline" href="#">Terms</a></li>
+                    <li><a class="hover:underline" href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label text-xs uppercase tracking-widest text-blue-900 mb-6 font-bold">Quartiers
+                    populaires</h4>
+                <ul class="space-y-4 text-slate-500 font-label text-xs uppercase tracking-widest">
+                    <li><a class="hover:underline" href="#">Tata</a></li>
+                    <li><a class="hover:underline" href="#">Dowsaré</a></li>
+                    <li><a class="hover:underline" href="#">Koulidara</a></li>
+                    <li><a class="hover:underline" href="#">Pounthioun</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-label text-xs uppercase tracking-widest text-blue-900 mb-6 font-bold">Contactez-nous
+                </h4>
+                <p class="text-slate-500 font-label text-xs uppercase tracking-widest mb-2">BP 123, Labé, Guinée</p>
+                <p class="text-slate-500 font-label text-xs uppercase tracking-widest mb-2">+224 600 00 00 00</p>
+                <p class="text-slate-500 font-label text-xs uppercase tracking-widest">contact@logestudent.gn</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-200/20 text-center">
+            <p class="text-slate-500 font-label text-xs uppercase tracking-widest">© 2024 LogeStudent. The Digital
+                Concierge for Labé.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
