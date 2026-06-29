@@ -1,0 +1,115 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 2px 0 rgba(30, 58, 138, 0.05);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 2px 0 rgba(30, 58, 138, 0.05);
+}
+
+.container, .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.navLinks {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: var(--color-on-surface-variant);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.active {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.25rem;
+}
+
+.registerBtn {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.registerBtn:hover {
+  opacity: 0.9;
+}
+
+.registerBtn:active {
+  transform: scale(0.95);
+}
+
+.mobileToggle {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--color-on-surface);
+  transition: background-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+.mobileToggle:hover {
+  background-color: rgba(241, 245, 249, 0.5);
+}
+
+.checkoutStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.875rem;
+  font-family: var(--font-label);
+}
+
+.checkoutStatus :global(.material-symbols-outlined) {
+  font-size: 0.875rem;
+}
